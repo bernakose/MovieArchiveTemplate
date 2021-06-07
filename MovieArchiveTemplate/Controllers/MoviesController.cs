@@ -84,7 +84,6 @@ namespace MovieArchiveTemplate.Controllers
             return View("MoviesThisWeek", contentMovies.ToPagedList(pageNumber, pageSize));
         }
 
-
         public ActionResult MoviesComingSoon(int? page, string sorting)
         {
             var contentMovies = db.Movie.Where(m => m.ReleaseDate >= DateTime.Now).ToList();
