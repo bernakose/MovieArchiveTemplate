@@ -1,0 +1,113 @@
+﻿@{
+    ViewBag.Title = "Movie Archive Admin";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                @MovieArchiveTemplate.Resource.lang.Dashboard <small>@MovieArchiveTemplate.Resource.lang.staticover</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li class="active">
+                    <i class="fa fa-dashboard"></i> @MovieArchiveTemplate.Resource.lang.Dashboard
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-comments fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div class="huge">@ViewBag.GenreCount</div>
+                            <div>@MovieArchiveTemplate.Resource.lang.GenreCount</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="@Url.Action("Index", "Genres")">
+                    <div class="panel-footer">
+                        <span class="pull-left">@MovieArchiveTemplate.Resource.lang.DetayGöster</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="panel panel-green">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-tasks fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div class="huge">@ViewBag.MovieCount</div>
+                            <div>@MovieArchiveTemplate.Resource.lang.MovieCount</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="@Url.Action("Index", "Movies")">
+                    <div class="panel-footer">
+                        <span class="pull-left">@MovieArchiveTemplate.Resource.lang.DetayGöster</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="panel panel-yellow">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-shopping-cart fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div class="huge">@ViewBag.UserCount</div>
+                            <div>@MovieArchiveTemplate.Resource.lang.UserCount</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="@Url.Action("Index", "Users")">
+                    <div class="panel-footer">
+                        <span class="pull-left">@MovieArchiveTemplate.Resource.lang.DetayGöster</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="panel panel-red">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-support fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div class="huge">@ViewBag.AdminCount</div>
+                            <div>@MovieArchiveTemplate.Resource.lang.AdminCount</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="@Url.Action("Index", "Users")">
+                    <div class="panel-footer">
+                        <span class="pull-left">@MovieArchiveTemplate.Resource.lang.DetayGöster</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container-fluid -->
